@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import connectDB from './config/mongodb.js';
+import connectDB from './config/mongoDB.js';
 import searchRoutes from './routes/searchRoutes.js';
 import errorHandler from './middleware/errorHandler.js';
 
