@@ -9,7 +9,15 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+
+
+const corsOptions = {
+  origin: 'https://api-frontend-delta.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true 
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api', searchRoutes);
